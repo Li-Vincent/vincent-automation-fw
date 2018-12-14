@@ -22,18 +22,21 @@ public class SelectableElement extends PageElement implements Selectable
         super((WebElement) element);
     }
 
+    @Override
     public void select(int index)
     {
         Select select = new Select(element());
         select.selectByIndex(index);
     }
 
+    @Override
     public void selectByValue(String str)
     {
         Select select = new Select(element());
         select.selectByValue(str);
     }
 
+    @Override
     public void selectByText(String str)
     {
         Select select = new Select(element());
@@ -47,11 +50,13 @@ public class SelectableElement extends PageElement implements Selectable
         select.selectByVisibleText(str);
     }
 
+    @Override
     public boolean isEnabled()
     {
         return element().isEnabled();
     }
 
+    @Override
     public boolean isDisplayed()
     {
         return element().isDisplayed();

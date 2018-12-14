@@ -18,16 +18,19 @@ public class ReadableElement extends PageElement implements Readable
         super((WebElement) element);
     }
 
+    @Override
     public String read()
     {
         return element().getText();
     }
 
+    @Override
     public boolean isEnabled()
     {
         return element().isEnabled();
     }
 
+    @Override
     public boolean isDisplayed()
     {
         return element().isDisplayed();

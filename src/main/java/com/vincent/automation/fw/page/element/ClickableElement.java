@@ -18,21 +18,25 @@ public class ClickableElement extends PageElement implements Clickable
         super((WebElement) element);
     }
 
+    @Override
     public void click()
     {
         element().click();
     }
 
+    @Override
     public boolean isEnabled()
     {
         return element().isEnabled();
     }
 
+    @Override
     public boolean isDisplayed()
     {
         return element().isDisplayed();
     }
 
+    @Override
     public boolean isClicked()
     {
         return element().isSelected();

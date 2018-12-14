@@ -21,17 +21,20 @@ public class SubmittableElement extends PageElement implements Submittable
         super((WebElement) element);
     }
 
+    @Override
     public boolean submit()
     {
         element().submit();
         return true;
     }
 
+    @Override
     public boolean isEnabled()
     {
         return element().isEnabled();
     }
 
+    @Override
     public boolean isDisplayed()
     {
         return element().isDisplayed();

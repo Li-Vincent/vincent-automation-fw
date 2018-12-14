@@ -26,11 +26,13 @@ public class SlidableElement extends PageElement implements Slidable
         super((WebElement) element);
     }
 
+    @Override
     public boolean isEnabled()
     {
         return element().isEnabled();
     }
 
+    @Override
     public boolean isDisplayed()
     {
         return element().isDisplayed();

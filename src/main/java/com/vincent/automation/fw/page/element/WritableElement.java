@@ -22,6 +22,7 @@ public class WritableElement extends PageElement implements Writable
         super((WebElement) element);
     }
 
+    @Override
     public void write(String str)
     {
         element().clear();
@@ -33,6 +34,7 @@ public class WritableElement extends PageElement implements Writable
         element().sendKeys(Keys.ESCAPE);
     }
 
+    @Override
     public void append(String str)
     {
         element().sendKeys(str);
@@ -53,21 +55,24 @@ public class WritableElement extends PageElement implements Writable
             return "";
         }
         if (endIndex > str.length()) {
-
+            return str.substring(beginIndex);
         }
         return str.substring(beginIndex, endIndex);
     }
 
+    @Override
     public String read()
     {
         return element().getText();
     }
 
+    @Override
     public boolean isEnabled()
     {
         return element().isEnabled();
     }
 
+    @Override
     public boolean isDisplayed()
     {
         return element().isDisplayed();
