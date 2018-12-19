@@ -1,13 +1,10 @@
 package com.vincent.automation.lib.logger;
 
-import java.io.File;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
 public class TestLogger extends Logger
 {
